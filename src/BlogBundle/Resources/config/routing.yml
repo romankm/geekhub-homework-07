@@ -1,0 +1,26 @@
+no_parameter_action:
+    path:     no-parameter-action
+    defaults: { _controller: BlogBundle:Default:noParameter }
+
+one_parameter_action:
+    path:     one-parameter-action/{parameter}
+    defaults: { _controller: BlogBundle:Default:oneParameter }
+
+few_parameters_action:
+    path:     few-parameters-action/{one}/{two}/{three}
+    defaults: { _controller: BlogBundle:Default:fewParameters, three: three }
+    requirements:
+        one: '\d+'
+        two: '\w+'
+        three: '\w+'
+
+forward_action:
+    path:     forward
+    defaults: { _controller: BlogBundle:Default:forward }
+
+redirect:
+    path: /redirect-me
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: no_parameter_action
+        permanent: true

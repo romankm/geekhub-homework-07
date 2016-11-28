@@ -1,0 +1,3 @@
+with_prefix:
+    path:     with-prefix
+    defaults: { _controller: BlogBundle:Blog:withPrefix}
