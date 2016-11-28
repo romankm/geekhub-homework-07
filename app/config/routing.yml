@@ -5,7 +5,3 @@ blog:
 blog_routes_with_prefix:
     resource: "@BlogBundle/Resources/config/routing_with_prefix.yml"
     prefix:   /test-prefix
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
